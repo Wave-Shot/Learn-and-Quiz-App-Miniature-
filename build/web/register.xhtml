@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <h:head><h1>Registration Form</h1>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+        </h:head>
+    <h:form id="form">
+         <h:outputLabel for="txtname">
+                <h:outputText value="Enter Name     "/>
+            </h:outputLabel>
+          
+      <h:inputText id="txtname" value="#{obj.name}" 
+				size="20" required="true" label="   *Name">
+				<f:validateLength minimum="5" maximum="10" />
+			</h:inputText>
+          
+			<h:message for="txtname" style="color:red"/>
+             
+            <br></br><br></br>
+            
+         <h:outputLabel for="txtcode">
+                <h:outputText value="Enter Code     "/>
+            </h:outputLabel>
+            <h:inputSecret id="txtcode" value="#{obj.code}" size="20" required="true"/>
+               
+          
+            
+            <br></br><br></br>
+            
+         <h:outputLabel for="txtage">
+                <h:outputText value="Enter Age    "/>
+            </h:outputLabel>
+         
+            <h:inputText id="txtage" value="#{obj.age}" required="true" validatorMessage=" *Required">
+                <f:validateLength/>
+            </h:inputText>
+            
+            <h:message for="txtage" style="color:red;"/>
+            
+            <br></br><br></br>
+            
+            <h:outputLabel for="gender">Choose Gender</h:outputLabel>  
+            <h:selectOneRadio value="#{obj.gender}">  
+            <f:selectItem itemValue="Male" itemLabel="Male" />  
+            <f:selectItem itemValue="Female" itemLabel="Female" />  
+            </h:selectOneRadio>
+            
+            <br></br><br></br>
+            
+          <h:outputLabel for="txtphonenumber">
+                <h:outputText value="Enter PhoneNumber     "/>
+            </h:outputLabel>
+            <h:inputText id="txtphonenumber" value="#{obj.phonenumber}" validatorMessage=" *Please enter only number of size 10">
+                <f:validateLength minimum="10" maximum="10"/>
+            </h:inputText>
+            <h:message for="txtphonenumber" style="color:red;"/>
+            
+            <br></br><br></br>
+         
+         <h:outputLabel for="txtmailid">
+                <h:outputText value="Enter MailId    "/>
+            </h:outputLabel>
+            <h:inputText id="txtmailid" value="#{obj.mailid}" validatorMessage=" *Invalid mail id format"> 
+                <f:validateRegex pattern= "^(.+)@(.+)$"/>
+                    </h:inputText>
+                <h:message for="txtmailid" style="color:red;" />
+            
+            <br></br><br></br>
+            
+            <h:outputText value="Choose Current Profession    "/>
+            <h:selectOneMenu value="#{obj.currenteducation}">
+   	<f:selectItem itemLabel="Higher Education" itemValue="he" />
+   	<f:selectItem itemLabel="UG" itemValue="ug"  />
+   	<f:selectItem itemLabel="PG" itemValue="pg" />
+        <f:selectItem itemLabel="Working" itemValue="working" />
+        </h:selectOneMenu>
+            
+            <br></br><br></br>
+            
+         <h:outputLabel for="txtcountry">
+                <h:outputText value="Enter Country    "/>
+            </h:outputLabel>
+            <h:inputText id="txtcountry" value="#{obj.country}" validatorMessage=" *Please enter country"> 
+                <f:validateRequired/>
+            </h:inputText>
+            <h:message for="txtcountry" style="color:red;"/>
+            
+            <br></br><br></br>
+            
+             <h:commandButton id="cmdregister" value="Register" action="#{obj.register}"/>
+    </h:form>
+    
+</html>

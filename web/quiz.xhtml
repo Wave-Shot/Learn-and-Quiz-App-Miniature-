@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core" >
+    <h:head></h:head>
+    <h:body >
+    <h:form>
+         <h:commandButton id="cmdsuccess" value="Back" action="success.xhtml"/>
+    
+            <br></br><br></br>
+            
+            <h1 style="color:green;">Q1. Does java support OOPS concept?</h1>
+            
+            <h:selectOneRadio value="#{obj.q1}">  
+            <f:selectItem itemValue="yes" itemLabel="Yes" />  
+            <f:selectItem itemValue="no" itemLabel="No" />  
+            </h:selectOneRadio>
+            <br></br><br></br>
+            
+            <h1 style="color:green;">Q2.Collection of Object is called?</h1>
+            
+            <h:selectOneRadio value="#{obj.q2}">  
+            <f:selectItem itemValue="object" itemLabel="Object" />  
+            <f:selectItem itemValue="class" itemLabel="Class" />  
+            <f:selectItem itemValue="polymorphism" itemLabel="Polymorphism" />  
+            <f:selectItem itemValue="encapsulation" itemLabel="Encasulation" />  
+            </h:selectOneRadio>
+            <br></br><br></br>
+            
+            <h1 style="color:green;">Q2.Hiding internal details and showing functionality is known as ___________</h1>
+            
+            <h:selectOneRadio value="#{obj.q3}">  
+            <f:selectItem itemValue="object" itemLabel="Object" />  
+            <f:selectItem itemValue="class" itemLabel="Class" />  
+            <f:selectItem itemValue="abstraction" itemLabel="Abstraction" />  
+            <f:selectItem itemValue="inheritance" itemLabel="Inheritance" />  
+            </h:selectOneRadio>
+            <br></br><br></br>
+            
+            
+            
+           <h:commandButton id="cmdscore" value="Score" action="#{obj.score}"/>
+            
+            
+    </h:form>
+    </h:body>
+    
+</html>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    
+    </h:head>
+    <h:form>
+    <h1> Welcome
+        <h:outputText value=", #{obj.name}" /></h1>
+        
+    <br></br>
+    
+    
+    <h:commandButton id="cmdprofile" value="Profile" action="profile.xhtml"/>
+    <br></br><br></br>
+    <h:commandButton id="cmdlogout" value="logout" action="index.xhtml"/>
+    <br></br>
+    <br></br>
+    <h1>What is Java?</h1>
+    <h:outputText value="
+                  Java is a programming language and a platform. Java is a high level, robust, object-oriented and secure programming language."/><br></br>
+    <h:outputText value="Java was developed by Sun Microsystems (which is now the subsidiary of Oracle) in the year 1995"/>
+    <br></br><br></br>
+    <h1>Oops Concept</h1>
+    <h:outputText value="Object:
+    Java Object
+    Any entity that has state and behavior is known as an object. For example, a chair, pen, table, keyboard, bike, etc. It can be physical or logical."/>
+
+    <br></br><br></br>
+    
+    <h:outputText value="Class:Collection of objects is called class. It is a logical entity."/>
+    
+    <br></br><br></br>
+    
+    <h:outputText value="Inheritance:When one object acquires all the properties and behaviors of a parent object, it is known as inheritance. It provides code reusability. It is used to achieve runtime polymorphism."/>
+<br></br><br></br>
+    
+    <h:outputText value="Polymorphism:If one task is performed in different ways, it is known as polymorphism. For example: to convince the customer differently, to draw something, for example, shape, triangle, rectangle, etc."/>
+    
+    <br></br><br></br>
+    
+    <h:outputText value="Abstraction:Hiding internal details and showing functionality is known as abstraction. For example phone call, we don't know the internal processing."/>
+    
+    <br></br><br></br>
+    
+    <h:outputText value="Encapsulation:Binding (or wrapping) code and data together into a single unit are known as encapsulation. For example, a capsule, it is wrapped with different medicines."/>
+    
+    <br></br><br></br>
+    <h5>Hello, Ready for a Test :)</h5>
+    <h:commandButton id="cmdquiz" value="Test" action="quiz.xhtml"/>
+    </h:form>
+    
+    
+
+</html>

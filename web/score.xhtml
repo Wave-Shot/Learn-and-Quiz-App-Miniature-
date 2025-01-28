@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:h="http://xmlns.jcp.org/jsf/html" >
+    <h:head></h:head>
+    <h:form>
+        
+        
+        <h:commandButton id="cmdquiz" value="Back" action="quiz.xhtml"/>
+        <h5>New score updated :)</h5>
+        <h:outputText value="Old Score is #{obj.prev_score}"></h:outputText>
+        
+        <h1><h:outputText value="New Score is #{obj.score} / 30"/></h1>
+    </h:form>
+</html>
